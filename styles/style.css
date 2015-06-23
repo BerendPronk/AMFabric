@@ -1,0 +1,60 @@
+body, html {
+    margin: 0;
+    padding: .5em 0 0;
+    background-color: #eab9b9;
+}
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    color: #333;
+}
+article {
+    width: 70%;
+    height: 80vh;
+    margin: 0 auto;
+    padding: 4em 0;
+    border-radius: 1em;
+    background-color: #fff;
+    box-shadow: 0px 2px 2px #be9292;
+}
+section.options {
+    float: left;
+    width: 50%;
+    margin-left: 9%;
+}
+section.options .top {
+    margin: 0 0 10%;
+}
+section.options .bottom {
+}
+section#modelBox {
+    box-sizing: border-box;
+    float: left;
+    width: 22%;
+    height: 60vh;
+    margin: 5% 5% 0;
+    padding: 4em 5em 0 3em;
+    overflow: hidden;
+    border-radius: 1em;
+    /*border: .1em solid #333;*/
+    background-color: #f2f2f2;
+}
+ul {
+    display: flex;
+    width: 100%;
+    margin: 1em 0;
+    padding: 0;
+}
+li {
+    width: 130px;
+    height: 130px;
+    margin: 0 2.5%;
+    list-style-type: none;
+    cursor: pointer;
+}
+li.on {
+    box-shadow: inset 0px 0px 35px 0px rgba(0,0,0,0.5);
+}
+path {
+    transition: 0.3s ease-in-out;
+}
