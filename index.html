@@ -1,45 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     <title>AMFabric</title>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
 </head>
 <body>
+    <h1>AMFabric</h1>
     <article>
-        <section class="options">
-            <section class="top">
-                <h2>Selecteer een kledingstuk voor je <span style="font-weight:bold">BOVEN</span>lichaam</h2>
-                <ul id="topchoice">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <ul id="topcolorchoice">
-                    <li style="background-color: #95c11f;"></li>
-                    <li style="background-color: #ea394a;"></li>
-                    <li style="background-color: #5face0;"></li>
-                    <li style="background-color: #233e3f;"></li>
-                </ul>
-            </section>
-            <section class="bottom">
-                <h2>Selecteer een kledingstuk voor je <span style="font-weight:bold">ONDER</span>lichaam</h2>
-                <ul id="bottomchoice">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <ul id="bottomcolorchoice">
-                    <li style="background-color: #a81143;"></li>
-                    <li style="background-color: #375f7f;"></li>
-                    <li style="background-color: #377c63;"></li>
-                    <li style="background-color: #242825;"></li>
-                </ul>
-            </section>
+        <section id="toptab" class="top">
+            <h2>Selecteer je bovenkleding</h2>
+            <ul id="topchoice">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li id="topslide">&gt;</li>
+            </ul>
         </section>
-        <section id="modelBox"></section>    
+
+        <section id="modelBox"></section> 
+
+        <section id="bottomtab" class="bottom">
+            <h2>Selecteer een broek of rok</h2>
+            <ul id="bottomchoice">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li id="bottomslide">&lt;</li>
+            </ul>
+        </section>
+    </article>
+    <article class="coloroptions">
+        <section id="topcolortab">
+            <h2>Stoffen voor bovenkleding</h2>
+            <ul id="topcolorchoice">
+                <li style="background-color: #95c11f;"></li>
+                <li style="background-color: #ea394a;"></li>
+                <li style="background-color: #5face0;"></li>
+                <li style="background-color: #233e3f;"></li>
+                <li id="retracttopcolors">V</li>
+            </ul>
+        </section>
+        <section id="bottomcolortab">
+            <h2>Stoffen voor broek of rok</h2>
+            <ul id="bottomcolorchoice">
+                <li style="background-color: #a81143;"></li>
+                <li style="background-color: #375f7f;"></li>
+                <li style="background-color: #377c63;"></li>
+                <li style="background-color: #242825;"></li>
+                <li id="retractbottomcolors">V</li>
+            </ul>            
+        </section>
     </article>
     
     <script src="js/raphael-min.js" type="text/javascript" charset="utf-8"></script>

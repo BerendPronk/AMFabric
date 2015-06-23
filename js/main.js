@@ -111,7 +111,7 @@ tops[0].addEventListener('click', function() {
 	if (top1Limit <= 1) {
 		top1 = paper.path(topSelection[0]);
 		top1.attr({fill: '#999', stroke: 'none', opacity: '0'});
-		top1.translate(200, 0);
+		top1.translate(-140, 0);
 
 		top1.animate({transform: ['t', 0, 0]}, 600, 'backIn');
 		top1.show().animate({ opacity : 1 }, 300);
@@ -142,7 +142,7 @@ tops[1].addEventListener('click', function() {
 	if (top2Limit <= 1) {
 		top2 = paper.path(topSelection[1]);
 		top2.attr({fill: '#999', stroke: 'none', opacity: '0'});
-		top2.translate(200, 0);
+		top2.translate(-140, 0);
 
 		top2.animate({transform: ['t', 0, 0]}, 600, 'backIn');
 		top2.show().animate({ opacity : 1 }, 300);
@@ -172,7 +172,7 @@ tops[2].addEventListener('click', function() {
 	if (top3Limit <= 1) {
 		top3 = paper.path(topSelection[2]);
 		top3.attr({fill: '#999', stroke: 'none', opacity: '0'});
-		top3.translate(200, 0);
+		top3.translate(-140, 0);
 
 		top3.animate({transform: ['t', 0, 0]}, 600, 'backIn');
 		top3.show().animate({ opacity : 1 }, 300);
@@ -202,7 +202,7 @@ tops[3].addEventListener('click', function() {
 	if (top4Limit <= 1) {
 		top4 = paper.path(topSelection[3]);
 		top4.attr({fill: '#999', stroke: 'none', opacity: '0'});
-		top4.translate(200, 0);
+		top4.translate(-140, 0);
 
 		top4.animate({transform: ['t', 0, 0]}, 600, 'backIn');
 		top4.show().animate({ opacity : 1 }, 300);
@@ -335,10 +335,10 @@ bottoms[0].addEventListener('click', function() {
 	if (bottom1Limit <= 1) {
 		bottom1 = paper.path(bottomSelection[0]);
 		bottom1.attr({fill: '#666', stroke: 'none', opacity: '0'});
-		bottom1.translate(-140, 0);
+		bottom1.translate(200, 0);
 
-		bottom1.animate({transform: ['t', 0, 0]}, 500, 'backIn');
-		bottom1.show().animate({ opacity : 1 }, 250);
+		bottom1.animate({transform: ['t', 0, 0]}, 600, 'backIn');
+		bottom1.show().animate({ opacity : 1 }, 300);
 	}
 });
 bottoms[1].addEventListener('click', function() {
@@ -365,10 +365,10 @@ bottoms[1].addEventListener('click', function() {
 	if (bottom2Limit <= 1) {
 		bottom2 = paper.path(bottomSelection[1]);
 		bottom2.attr({fill: '#666', stroke: 'none', opacity: '0'});
-		bottom2.translate(-140, 0);
+		bottom2.translate(200, 0);
 
-		bottom2.animate({transform: ['t', 0, 0]}, 500, 'backIn');
-		bottom2.show().animate({ opacity : 1 }, 250);
+		bottom2.animate({transform: ['t', 0, 0]}, 600, 'backIn');
+		bottom2.show().animate({ opacity : 1 }, 300);
 	}
 });
 bottoms[2].addEventListener('click', function() {
@@ -395,10 +395,10 @@ bottoms[2].addEventListener('click', function() {
 	if (bottom3Limit <= 1) {
 		bottom3 = paper.path(bottomSelection[2]);
 		bottom3.attr({fill: '#666', stroke: 'none', opacity: '0'});
-		bottom3.translate(-140, 0);
+		bottom3.translate(200, 0);
 
-		bottom3.animate({transform: ['t', 0, 0]}, 500, 'backIn');
-		bottom3.show().animate({ opacity : 1 }, 250);
+		bottom3.animate({transform: ['t', 0, 0]}, 600, 'backIn');
+		bottom3.show().animate({ opacity : 1 }, 300);
 	}
 });
 bottoms[3].addEventListener('click', function() {
@@ -425,10 +425,10 @@ bottoms[3].addEventListener('click', function() {
 	if (bottom4Limit <= 1) {
 		bottom4 = paper.path(bottomSelection[3]);
 		bottom4.attr({fill: '#666', stroke: 'none', opacity: '0'});
-		bottom4.translate(-140, 0);
+		bottom4.translate(200, 0);
 
-		bottom4.animate({transform: ['t', 0, 0]}, 500, 'backIn');
-		bottom4.show().animate({ opacity : 1 }, 250);
+		bottom4.animate({transform: ['t', 0, 0]}, 600, 'backIn');
+		bottom4.show().animate({ opacity : 1 }, 300);
 	}
 });
 
@@ -510,3 +510,57 @@ bottomColors[3].addEventListener('click', function() {
 	}
 });
 
+// for the responsive layout clothes selection
+var topSlide = document.getElementById('topslide');
+var topTab = document.getElementById('toptab');
+var topColorTab = document.getElementById('topcolortab');
+
+var bottomSlide = document.getElementById('bottomslide');
+var bottomTab = document.getElementById('bottomtab');
+var bottomColorTab = document.getElementById('bottomcolortab');
+
+var retractTopColors = document.getElementById('retracttopcolors');
+var retractBottomColors = document.getElementById('retractbottomcolors');
+
+topSlide.addEventListener('click', function() {
+	
+	if (topTab.className == 'top') {
+		topSlide.innerHTML = '&lt;';
+
+		topTab.className = 'topopen';
+		topColorTab.className = 'activated';
+
+		bottomTab.className = 'bottomclosed';
+		bottomColorTab.className = 'none';
+	} else {
+		topSlide.innerHTML = '&gt;';
+
+		topTab.className = 'top';
+
+		bottomTab.className = 'bottom';
+	}
+});
+bottomSlide.addEventListener('click', function() {
+	
+	if (bottomTab.className == 'bottom') {
+		bottomSlide.innerHTML = '&gt;';
+
+		bottomTab.className = 'bottomopen';
+		bottomColorTab.className = 'activated';
+
+		topTab.className = 'topclosed';
+		topColorTab.className = 'none';
+	} else {
+		bottomSlide.innerHTML = '&lt;';
+
+		bottomTab.className = 'bottom';
+
+		topTab.className = 'top';
+	}
+});
+retractTopColors.addEventListener('click', function() {
+	topColorTab.className = '';
+});
+retractBottomColors.addEventListener('click', function() {
+	bottomColorTab.className = '';
+});
