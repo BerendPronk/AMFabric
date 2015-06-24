@@ -4,15 +4,18 @@ body {
     overflow: hidden;
     background-color: #ff8b88;
 }
-h1, h2 {
+h1, h2, p, li {
     font-family: 'Raleway', sans-serif;
     font-weight: normal;
     color: #333;
 }
-h1 {
+h1, p {
     width: 100%;
     text-align: center;
     color: #fff;
+}
+p {
+    font-size: 1.5;
 }
 article {
     display: -webkit-box;
@@ -52,6 +55,7 @@ section#modelBox {
     margin: 5% 10% 0 5%;
     padding: 4em 5em 0 3em;
     overflow: hidden;
+    cursor: pointer;
     border-radius: 1em;
     background-color: #f2f2f2;
 }
@@ -83,10 +87,31 @@ li.on {
 li#topslide, li#bottomslide {
     display: none;
 }
+ul#confirmOpt {
+    width: 30%;
+    margin: 0 auto 1em;
+}
+ul#confirmOpt li {
+    width: 45%;
+    height: 100%;
+    margin: 0 2.5%;
+    padding: .5em 0;
+    text-align: center;
+    color: #ff8b88;
+    border-radius: .5em;
+    background-color: #fff;
+}
+.selfcenter {
+    align-self: center !important;
+
+    margin: 2em 0 0 0 !important;
+}
 path {
     transition: 0.3s ease-in-out;
 }
-
+.none {
+    display: none;
+}
 
 @media (max-width: 479px) {
 
@@ -151,7 +176,7 @@ ul#topchoice, ul#bottomchoice {
 }
 ul#topchoice li, ul#bottomchoice li {
     height: 25%;
-    background-color: #fff;
+    background-color: #f2f2f2;
 }
 li svg {
     width: 130px;
@@ -162,6 +187,17 @@ li.on {
     background-color: #fff;
     background: #fff;
 }
+ul#confirmOpt {
+    flex-direction: row;
+
+    width: 80%;
+    margin: 0 10% 1.5em;
+}
+.selfcenter {
+    align-self: center !important;
+    
+    margin: -55% 0 0 17% !important;
+}
 li#topslide, li#bottomslide {
     display: block;
     width: 150%;
@@ -169,9 +205,9 @@ li#topslide, li#bottomslide {
     font-family: 'Raleway', sans-serif;
     font-size: 2.1em;
     text-align: center;
-    color: #333;
+    color: #fff;
     border-radius: 50%;
-    background-color: #f2f2f2 !important;
+    background-color: #ff8b88 !important;
     box-shadow: 0px 2px 2px #ccc;
 }
 li#bottomslide {
@@ -217,11 +253,8 @@ article.coloroptions li#retracttopcolors, article.coloroptions li#retractbottomc
     font-family: 'Raleway', sans-serif;
     font-size: 1.4em;
     text-align: center;
-    color: #333;
-    background-color: #f2f2f2;
-}
-.none {
-    display: none;
+    color: #fff;
+    background-color: #ff8b88;
 }
 
 }

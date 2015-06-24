@@ -564,3 +564,37 @@ retractTopColors.addEventListener('click', function() {
 retractBottomColors.addEventListener('click', function() {
 	bottomColorTab.className = '';
 });
+
+var modelBox = document.getElementById('modelBox');
+var heading = document.getElementById('heading');
+
+var confirmMsg = document.getElementById('confirmMsg');
+var confirmOpt = document.getElementById('confirmOpt');
+var confirmY = document.querySelectorAll('#confirmOpt li')[0];
+var confirmN = document.querySelectorAll('#confirmOpt li')[1];
+
+modelBox.addEventListener('click', function() {
+	heading.textContent = 'Send design';
+	confirmMsg.textContent = 'Are you sure?';
+
+	confirmOpt.className = '';
+});
+confirmY.addEventListener('click', function() {
+	heading.textContent = 'Design sent!';
+	confirmMsg.textContent = 'contact us via: 020 595 4555';
+
+	confirmOpt.className ='none';
+	topTab.className = 'none';
+	bottomTab.className = 'none';
+	topColorTab.className = 'none';
+	bottomColorTab.className = 'none';
+
+	modelBox.className = 'selfcenter';
+
+});
+confirmN.addEventListener('click', function() {
+	heading.textContent = 'AMFabric';
+	confirmMsg.textContent = '';
+
+	confirmOpt.className = 'none';
+});
