@@ -1,2 +1,2 @@
 # AMFabric
-Technical part of the clothes fitting prototyp of AMFI. Made by Berend Pronk for the Excellence program of Amsterdam University of Applied Sciences.
+Technical part of the clothes fitting prototype of AMFI. Made by Berend Pronk for the Excellence program of Amsterdam University of Applied Sciences.
